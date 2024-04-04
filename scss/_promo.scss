@@ -1,0 +1,179 @@
+.promo {
+    position: relative;
+    
+    font-family: 'Manrope';
+    &__btns {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        .btn {
+            height: 60px;
+            gap: 8px;
+            img {
+                width: 20px;
+
+            }
+        }
+    }
+    &__slider {
+        width: 100%;
+        height: 100vh;
+        
+        .slick-arrow {
+            position: absolute;
+            top: 50%;
+            right: 16px;
+            transform: translateY(-50%);
+            background: transparent;
+            color: transparent;
+            font-size: 1px;
+            border: 1px solid #000;
+            border-radius: 100%;
+            width: 60px;
+            height: 60px;
+            cursor: pointer;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/next.svg) no-repeat center; 
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                background-color: #000;
+                &::before {
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
+        }
+        .slick-prev {
+            transform: translateY(-50%) rotate(-180deg);
+            left: 16px;
+            z-index: 1;
+        }
+        .slick-dots {
+            display: flex;
+            list-style-type: none;
+            gap: 4px;
+            justify-content: center;
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translateX(-50%);
+            button {
+                width: 8px;
+                height: 8px;
+                background: transparent;
+                color: transparent;
+                font-size: 1px;
+                border: 1px solid #767676;
+                border-radius: 100%;
+                transition: background-color .3s;
+            }
+            .slick-active {
+                button {
+                    background-color: #000;
+                }
+            }
+        }
+    }
+    &__slide {
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        padding-top: 100px;
+        padding-bottom: 60px;
+        position: relative;
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        &1 {
+            background-image: url(../img/promo-bg.png);
+           
+            background-position: 100% 0%;
+            .container {
+                
+                justify-content: space-between;
+                
+            }
+        }
+        &__img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                top: 0;
+                background: #ddd;
+                opacity: .7;
+            }
+            img {
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+        // &:nth-child(2) {
+        //     background-image: url(../img/promo-bg1.png);
+        // }
+        // &:nth-child(3) {
+        //     background-image: url(../img/promo-bg2.png);
+        // }
+        // &:nth-child(4) {
+        //     background-image: url(../img/promo-bg3.png);
+        // }
+        // &:nth-child(5) {
+        //     background-image: url(../img/promo-bg4.png);
+        // }
+        // &:nth-child(6) {
+        //     background-image: url(../img/promo-bg5.png);
+        // }
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        text-align: center;
+        
+        text-transform: uppercase;
+        
+        max-width: 628px;
+        margin: 0 auto 18px;
+    }
+    &__subtitle {
+        font-size: 20px;
+        text-align: center;
+        color: #000;
+        text-wrap: balance;
+        line-height: 160%;
+        max-width: 790px;
+        margin: 0 auto 60px;
+        
+    }
+  
+    
+    &__items {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+    }
+    &__item {
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 600;
+        line-height: 137%;
+        font-size: 16px;
+    }
+}

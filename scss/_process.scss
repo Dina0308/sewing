@@ -1,0 +1,58 @@
+.process {
+    padding: 60px 0;
+    &__wrapper {
+        margin-top: 48px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px 12px;
+        
+    }
+    &__item {
+        border: 1px solid #000;
+        border-radius: 8px;
+        padding: 24px 48px 24px 24px;
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    &__num {
+        font-size: 36px;
+        font-weight: 400;
+        text-align: center;
+    }
+    &__title {
+        font-weight: 600;
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 137%;
+    }
+}
+.form {
+    margin-top: 48px;
+    &__text {
+        text-align: center;
+        font-weight: 600;
+        font-size: 24px;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 16px;
+        max-width: 675px;
+        margin: 32px auto;
+    }
+    .btn {
+        white-space: nowrap;
+    }
+    &__input {
+        border-radius: 6px;
+        border: 1px solid $text-color;
+        padding: 0 16px;
+        height: 50px;
+        &:focus {
+            outline: 3px solid #ddd;
+        }
+    }
+}

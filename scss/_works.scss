@@ -1,0 +1,160 @@
+.works {
+    .title2 {
+        text-align: center;
+    }
+    padding: 120px 0 60px;
+    &__slide {
+        padding: 0 2px;
+        max-height: 478px;
+        height: 478px;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        a {
+            cursor: zoom-in;
+        }
+    }
+    &__slider {
+        max-height: 478px;
+        margin-top: 48px;
+        margin-bottom: 64px;
+        .slick-arrow {
+            position: absolute;
+            top: -94px;
+            right: 0px;
+            
+            background-color: transparent;
+            color: transparent;
+            font-size: 1px;
+            border: 1px solid $text-color;
+            border-radius: 100%;
+            width: 48px;
+            height: 48px;
+            cursor: pointer;
+            transition: background-color .3s;
+            &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: url(../img/next.svg) no-repeat center; 
+                width: 100%;
+                height: 100%;
+            }
+            &:hover {
+                background-color: #000;
+                &::before {
+                    filter: grayscale(1) brightness(1000%);
+                }
+            }
+        }
+        .slick-prev {
+            transform: rotate(-180deg);
+            right: 52px;
+            z-index: 2;
+        }
+        &__wrap {
+            width: 100%;
+            overflow: visible;
+
+        }
+    }
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        gap: 16px;
+        margin-top: 48px;
+        margin-bottom: 64px;
+    }
+    &__item {
+        
+        &__img {
+            
+            border-radius: 100%;
+            background-color: #CAC8C9;
+            border: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            aspect-ratio: 1 / 1;
+            transition: background-color .3s;
+            &:hover {
+                background-color: #E4E3E4;
+            }
+        }
+        &__text {
+            font-size: 18px;
+            
+            line-height: 137%;
+            text-align: center;
+            margin-top: 8px;
+        }
+        
+        img {
+            width: 50%;
+            height: 50%;
+            object-fit: contain;
+        }
+    }
+    .btn {
+        margin: 0 auto;
+    }
+    &__telegram {
+        border-radius: 15px;
+        background: url(../img/works-tg-bg.jpg) no-repeat center/cover;
+        padding: 48px 48px 64px;
+        margin-top: 64px;
+        position: relative;
+        &__overlay {
+            width: 0;
+            height: 105%;
+            position: absolute;
+            top: -2%;
+            right: 0;
+            background: #fff;
+
+        }
+        &__text {
+            
+            font-size: 24px;
+            line-height: 150%;
+            
+            text-align: center;
+            color: #fff;
+
+        }
+        &__link {
+            font-weight: 600;
+            font-size: 36px;
+            letter-spacing: 0.05em;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            
+            position: relative;
+            width: fit-content;
+            margin: 36px auto 0;
+            padding-bottom: 8px;
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 2px;
+                background: #fff;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                transition: width .3s;
+            }
+            &:hover {
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
